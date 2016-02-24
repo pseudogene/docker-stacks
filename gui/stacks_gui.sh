@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright 2015, Michaël Bekaert <michael.bekaert@stir.ac.uk>
+# Copyright 2015-2016, Michaël Bekaert <michael.bekaert@stir.ac.uk>
 #
 # This file is part of docker-stacks.
 #
@@ -18,7 +18,7 @@
 # along with Docker-Stacks.If not, see <http://www.gnu.org/licenses/>.
 #
 
-STACKVERSION=1.35
+STACKVERSION=1.36
 DOCKERVERSION=1.0
 
 DEBIAN_FRONTEND=noninteractive apt-get install -y wget gcc g++ make --no-install-recommends

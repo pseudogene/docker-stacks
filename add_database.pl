@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 #
-# Copyright 2015, Michaël Bekaert <michael.bekaert@stir.ac.uk>
+# Copyright 2015-2016, Michaël Bekaert <michael.bekaert@stir.ac.uk>
 #
 # This file is part of docker-stacks.
 #
