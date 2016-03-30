@@ -34,7 +34,7 @@ $ docker run -it --rm -v /export:/mnt pseudogene/docker-stacks:cli \
    ustacks -t fastq -f /mnt/f0_male.fq -o /mnt/stacks -i 1 -d -r -m 3 -M
 ```
 
-Similary, if you want to the CLI to access MySQL database you need to provide the server address, username and password via the environment variable: `-e MYSQL_HOST="<HOSTIP>" -e MYSQL_PASS="<MYSQLPASS>" -e MYSQL_USER="<MYSQLUSER>"`:
+Similarly, if you want to the CLI to access MySQL database you need to provide the server address, username and password via the environment variable: `-e MYSQL_HOST="<HOSTIP>" -e MYSQL_PASS="<MYSQLPASS>" -e MYSQL_USER="<MYSQLUSER>"`:
 
 ```
 $ docker run -it --rm -v /export:/mnt -e MYSQL_HOST="127.0.0.1" \
@@ -178,12 +178,12 @@ Please see the Docker installation documentation for details on how to upgrade y
 
 ####User Feedback Documentation
 
-Be sure to familiariase yourself with the repository's [README.md](https://github.com/pseudogene/docker-stacks/blob/master/README.md) file before attempting a pull request.
+Be sure to familiarise yourself with the repository's [README.md](https://github.com/pseudogene/docker-stacks/blob/master/README.md) file before attempting a pull request.
 
 ####Issues
 
 If you have any problems with or questions about this docker image, please contact us through a [GitHub issue](https://github.com/pseudogene/docker-stacks/issues).
-Any issue related to Stacks itself must be done direclty with [Stacks developers](http://catchenlab.life.illinois.edu/stacks/) or via the [stacks-user mailing list](http://groups.google.com/group/stacks-users).
+Any issue related to Stacks itself must be done directly with [Stacks developers](http://catchenlab.life.illinois.edu/stacks/) or via the [stacks-user mailing list](http://groups.google.com/group/stacks-users).
 
 
 ####Contributing

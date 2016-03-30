@@ -19,7 +19,7 @@
 #
 
 STACKVERSION=1.37
-DOCKERVERSION=1.0
+DOCKERVERSION=1.1
 
 DEBIAN_FRONTEND=noninteractive apt-get install -y wget gcc g++ make --no-install-recommends
 DEBIAN_FRONTEND=noninteractive apt-get install -y zlib1g-dev libdbd-mysql-perl libsparsehash-dev samtools libbam-dev perl mysql-client --no-install-recommends

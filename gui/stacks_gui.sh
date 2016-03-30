@@ -19,7 +19,7 @@
 #
 
 STACKVERSION=1.37
-DOCKERVERSION=1.0
+DOCKERVERSION=1.1
 
 DEBIAN_FRONTEND=noninteractive apt-get install -y wget gcc g++ make --no-install-recommends
 DEBIAN_FRONTEND=noninteractive apt-get install -y zlib1g-dev libdbd-mysql-perl libsparsehash-dev samtools libbam-dev perl mysql-client --no-install-recommends
@@ -46,10 +46,7 @@ chown www-data:www-data /usr/local/share/stacks/php/export
 
 cd ..
 
-DEBIAN_FRONTEND=noninteractive apt-get install -y php-mdb2-driver-mysql php-pear php-mdb2 --no-install-recommends
-docker-php-ext-install mysql
-pear install pear/MDB2#mysql
-pear install MDB2_Driver_mysql
+DEBIAN_FRONTEND=noninteractive apt-get install -y mysql-client php5-mysqlnd libspreadsheet-writeexcel-perl --no-install-recommends
 
 echo -e "[client]\nport=3306\nlocal-infile=1\n" > /root/.my.cnf
 

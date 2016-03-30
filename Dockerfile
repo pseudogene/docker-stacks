@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 MAINTAINER Michael Bekaert <michael.bekaert@stir.ac.uk>
 
-LABEL description="Stacks (CLI) Docker" version="1.0" Vendor="Institute of Aquaculture, University of Stirling"
+LABEL description="Stacks (CLI) Docker" version="1.1" Vendor="Institute of Aquaculture, University of Stirling"
 
 USER root
 
