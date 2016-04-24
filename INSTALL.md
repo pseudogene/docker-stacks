@@ -5,13 +5,13 @@ git clone https://github.com/pseudogene/docker-stacks.git
 cd docker-stacks
 
 docker build -t pseudogene/docker-stacks:cli .
-docker tag -f pseudogene/docker-stacks:cli pseudogene/docker-stacks:1.38
-docker tag -f pseudogene/docker-stacks:cli pseudogene/docker-stacks:1.38-cli
+docker tag -f pseudogene/docker-stacks:cli pseudogene/docker-stacks:1.39
+docker tag -f pseudogene/docker-stacks:cli pseudogene/docker-stacks:1.39-cli
 docker tag -f pseudogene/docker-stacks:cli pseudogene/docker-stacks:latest
 
 cd gui
 docker build -t pseudogene/docker-stacks:gui .
-docker tag -f pseudogene/docker-stacks:gui pseudogene/docker-stacks:1.38-gui
+docker tag -f pseudogene/docker-stacks:gui pseudogene/docker-stacks:1.39-gui
 
 cd ../..
 ```

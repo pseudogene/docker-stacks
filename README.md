@@ -8,8 +8,8 @@ Stacks is a software pipeline for building loci from short-read sequences - Now 
 ##Full Description
 Supported tags and respective Dockerfile links
 
- * `1.38`, `1.38-cli`, `cli`, `latest` ([`Dockerfile`](https://github.com/pseudogene/docker-stacks/blob/master/Dockerfile))
- * `1.38-gui`, `gui` ([`gui/Dockerfile`](https://github.com/pseudogene/docker-stacks/blob/master/gui/Dockerfile))
+ * `1.39`, `1.39-cli`, `cli`, `latest` ([`Dockerfile`](https://github.com/pseudogene/docker-stacks/blob/master/Dockerfile))
+ * `1.39-gui`, `gui` ([`gui/Dockerfile`](https://github.com/pseudogene/docker-stacks/blob/master/gui/Dockerfile))
 
 For more information about this image and its history, please see the relevant manifest file. This image is updated via pull requests to the `docker-stacks` [GitHub repo](https://github.com/pseudogene/docker-stacks/).
 

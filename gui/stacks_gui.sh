@@ -18,7 +18,7 @@
 # along with Docker-Stacks.If not, see <http://www.gnu.org/licenses/>.
 #
 
-STACKVERSION=1.38
+STACKVERSION=1.39
 DOCKERVERSION=1.1
 
 DEBIAN_FRONTEND=noninteractive apt-get install -y wget gcc g++ make --no-install-recommends
