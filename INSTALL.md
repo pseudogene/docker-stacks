@@ -1,22 +1,22 @@
-#Build manually
+# Build manually
 
 ```
 git clone https://github.com/pseudogene/docker-stacks.git
 cd docker-stacks
 
 docker build -t pseudogene/docker-stacks:cli .
-docker tag -f pseudogene/docker-stacks:cli pseudogene/docker-stacks:1.40
-docker tag -f pseudogene/docker-stacks:cli pseudogene/docker-stacks:1.40-cli
+docker tag -f pseudogene/docker-stacks:cli pseudogene/docker-stacks:1.41
+docker tag -f pseudogene/docker-stacks:cli pseudogene/docker-stacks:1.41-cli
 docker tag -f pseudogene/docker-stacks:cli pseudogene/docker-stacks:latest
 
 cd gui
 docker build -t pseudogene/docker-stacks:gui .
-docker tag -f pseudogene/docker-stacks:gui pseudogene/docker-stacks:1.40-gui
+docker tag -f pseudogene/docker-stacks:gui pseudogene/docker-stacks:1.41-gui
 
 cd ../..
 ```
 
-#Start one-in-one
+# Start one-in-one
 Start docker Daemons:
 
 ```
@@ -34,14 +34,14 @@ wget http://catchenlab.life.illinois.edu/stacks/tutorial/stacks_samples.tar.gz
 tar xfz stacks_samples.tar.gz
 add_database.pl tut2_radtags
 mkdir stacks
-denovo_map.pl -m 3 -M 2 -n 3 -T 15 -B tut2_radtags -b 1 -t -a 2016-05-24  -D "Tutorial cross Genetic Map RAD-Tag Samples"  -o ./stacks  -p ./stacks_samples/male.fa  -p ./stacks_samples/female.fa -r ./stacks_samples/progeny_1.fa -r ./stacks_samples/progeny_2.fa  -r ./stacks_samples/progeny_3.fa
+denovo_map.pl -m 3 -M 2 -n 3 -T 15 -B tut2_radtags -b 1 -t -a 2016-06-22  -D "Tutorial cross Genetic Map RAD-Tag Samples"  -o ./stacks  -p ./stacks_samples/male.fa  -p ./stacks_samples/female.fa -r ./stacks_samples/progeny_1.fa -r ./stacks_samples/progeny_2.fa  -r ./stacks_samples/progeny_3.fa
 ```
 
 You can then access the interface via your web browser at
 
 >    http://localhost/stacks/
 
-#Start on remote servers
+# Start on remote servers
 
 Start MySQL docker Daemon on **Server #1** (IP 10.0.0.10):
 
