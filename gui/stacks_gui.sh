@@ -18,8 +18,7 @@
 # along with Docker-Stacks.If not, see <http://www.gnu.org/licenses/>.
 #
 DEBIAN_FRONTEND=noninteractive apt-get install -y wget gcc g++ make --no-install-recommends
-DEBIAN_FRONTEND=noninteractive apt-get install -y zlib1g-dev libdbd-mysql-perl libsparsehash-dev samtools libbam-dev perl mysql-client --no-install-recommends
-ln -s /usr/include/google /usr/include/sparsehash
+DEBIAN_FRONTEND=noninteractive apt-get install -y zlib1g-dev libdbd-mysql-perl samtools libbam-dev perl mysql-client --no-install-recommends
 
 perl -MCPAN -e 'my $c = "CPAN::HandleConfig"; $c->load(doit => 1, autoconfig => 1); $c->edit(prerequisites_policy => "follow"); $c->edit(build_requires_install_policy => "yes"); $c->commit'
 perl -MCPAN -e 'force install Spreadsheet::WriteExcel'
@@ -28,7 +27,7 @@ perl -MCPAN -e 'force install Spreadsheet::WriteExcel'
 wget http://catchenlab.life.illinois.edu/stacks/source/stacks-${STACKVERSION}.tar.gz
 tar xzf stacks-${STACKVERSION}.tar.gz
 cd stacks-${STACKVERSION} || exit
-./configure --enable-sparsehash --enable-bam --with-bam-include-path=/usr/include/samtools --with-bam-lib-path=/usr/lib
+./configure --enable-bam --with-bam-include-path=/usr/include/samtools --with-bam-lib-path=/usr/lib
 make -j 8
 make -j 8 -k install
 make -j 8 -k install
