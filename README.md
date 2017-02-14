@@ -16,7 +16,7 @@ For more information about this image and its history, please see the relevant m
 
 ### What is STACKS?
 
-[Stacks](http://catchenlab.life.illinois.edu/stacks/) is a software pipeline for building loci from short-read sequences, such as those generated on the Illumina platform. Stacks was developed to work with restriction enzyme-based data, such as RAD-seq, for the purpose of building genetic maps and conducting population genomics and phylogeography. Stacks is developed by Julian Catchen <jcatchen@illinois.edu> with contributions from Angel Amores <amores@uoregon.edu >, Paul Hohenlohe <hohenlohe@uidaho.edu>, and Bill Cresko <wcresko@uoregon.edu>.
+[Stacks](http://catchenlab.life.illinois.edu/stacks/) is a software pipeline for building loci from short-read sequences, such as those generated on the Illumina platform. Stacks was developed to work with restriction enzyme-based data, such as RAD-seq, for the purpose of building genetic maps and conducting population genomics and phylogeography. Stacks is developed by Julian Catchen <jcatchen@illinois.edu> with contributions from Angel Amores <amores@uoregon.edu>, Paul Hohenlohe <hohenlohe@uidaho.edu>, and Bill Cresko <wcresko@uoregon.edu>.
 
 >    http://catchenlab.life.illinois.edu/stacks/
 
@@ -89,14 +89,14 @@ You can then access the interface via your web browser at
 
 ### All-in-one server
 
-You will need a MySQL service, the Stacks GUI and Stacks CLI. If this example we will user the [`tutum/mysql`](https://hub.docker.com/r/tutum/mysql/) docker image for MySQL.
+You will need a MySQL service, the Stacks GUI and Stacks CLI. If this example we will user the [`mysql:latest`](https://hub.docker.com/_/mysql/) docker image for MySQL.
 
 Start MySQL docker Daemon:
 
 ```
 $ mkdir -p /var/lib/mysql
 $ docker run -d --restart=always -v /var/lib/mysql:/var/lib/mysql -p 3306:3306 \
-  -e MYSQL_PASS="dbpass" -e MYSQL_USER="dbuser" --name MySQL-App tutum/mysql
+  -e MYSQL_PASS="dbpass" -e MYSQL_USER="dbuser" --name MySQL-App mysql:latest
 ```
 
 Start Stacks GUI docker Daemon:
@@ -142,7 +142,7 @@ Start MySQL docker Daemon on **Server #1** (IP 10.0.0.10):
 ```
 $ mkdir -p /var/lib/mysql
 $ docker run -d --restart=always -v /var/lib/mysql:/var/lib/mysql -p 3306:3306 \
-  -e MYSQL_PASS="dbpass" -e MYSQL_USER="dbuser" --name MySQL-App tutum/mysql
+  -e MYSQL_PASS="dbpass" -e MYSQL_USER="dbuser" --name MySQL-App mysql:latest
 ```
 
 Start Stacks GUI docker Daemon on **Server #2** (IP 10.0.0.20):

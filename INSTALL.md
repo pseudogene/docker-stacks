@@ -21,7 +21,7 @@ Start docker Daemons:
 
 ```
 mkdir -p /var/lib/mysql
-docker run -d --restart=always -v /var/lib/mysql:/var/lib/mysql -p 3306:3306 -e MYSQL_PASS="dbpass" -e MYSQL_USER="dbuser" --name MySQL-App tutum/mysql
+docker run -d --restart=always -v /var/lib/mysql:/var/lib/mysql -p 3306:3306 -e MYSQL_PASS="dbpass" -e MYSQL_USER="dbuser" --name MySQL-App mysql:latest
 docker run -d --restart=always -p 80:80 --link MySQL-App:MySQL-App --name stacks-gui pseudogene/docker-stacks:gui
 
 docker run -it --rm -v /export:/mnt --link MySQL-App:MySQL-App docker-stacks:cli /bin/bash
@@ -48,7 +48,7 @@ Start MySQL docker Daemon on **Server #1** (IP 10.0.0.10):
 ```
 $ mkdir -p /var/lib/mysql
 $ docker run -d --restart=always -v /var/lib/mysql:/var/lib/mysql -p 3306:3306 \
-  -e MYSQL_PASS="dbpass" -e MYSQL_USER="dbuser" --name MySQL-App tutum/mysql
+  -e MYSQL_PASS="dbpass" -e MYSQL_USER="dbuser" --name MySQL-App mysql:latest
 ```
 
 Start Stacks GUI docker Daemon on **Server #2** (IP 10.0.0.20):
