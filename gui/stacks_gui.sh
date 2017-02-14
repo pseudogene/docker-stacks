@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright 2015-2016, Micha‘l Bekaert <michael.bekaert@stir.ac.uk>
+# Copyright 2015-2017, Micha‘l Bekaert <michael.bekaert@stir.ac.uk>
 #
 # This file is part of docker-stacks.
 #
@@ -27,7 +27,7 @@ perl -MCPAN -e 'force install Spreadsheet::WriteExcel'
 wget http://catchenlab.life.illinois.edu/stacks/source/stacks-${STACKVERSION}.tar.gz
 tar xzf stacks-${STACKVERSION}.tar.gz
 cd stacks-${STACKVERSION} || exit
-./configure --enable-bam --with-bam-include-path=/usr/include/samtools --with-bam-lib-path=/usr/lib
+./configure --enable-bam
 make -j 8
 make -j 8 -k install
 make -j 8 -k install
@@ -40,7 +40,11 @@ sed -i -e 's,DBI:mysql:$db:mysql,DBI:mysql:$db:" . (exists $ENV{"MYSQL_APP_PORT_
 chown www-data:www-data /usr/local/share/stacks/php/export
 cd ..
 
-DEBIAN_FRONTEND=noninteractive apt-get install -y mysql-client php5-mysqlnd libspreadsheet-writeexcel-perl --no-install-recommends
+DEBIAN_FRONTEND=noninteractive apt-get install -y mysql-client libspreadsheet-writeexcel-perl --no-install-recommends
+
+docker-php-source extract
+docker-php-ext-install mysqli
+docker-php-source delete
 
 echo -e "[client]\nport=3306\nlocal-infile=1\n" > /usr/local/share/stacks/sql/mysql.cnf
 cp /usr/local/share/stacks/sql/mysql.cnf /root/.my.cnf

@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright 2015-2016, Micha‘l Bekaert <michael.bekaert@stir.ac.uk>
+# Copyright 2015-2017, Micha‘l Bekaert <michael.bekaert@stir.ac.uk>
 #
 # This file is part of docker-stacks.
 #
@@ -27,7 +27,7 @@ perl -MCPAN -e 'force install Spreadsheet::WriteExcel'
 wget http://catchenlab.life.illinois.edu/stacks/source/stacks-${STACKVERSION}.tar.gz
 tar xzf stacks-${STACKVERSION}.tar.gz
 cd stacks-${STACKVERSION} || exit
-./configure --enable-bam --with-bam-include-path=/usr/include/samtools --with-bam-lib-path=/usr/lib
+./configure --enable-bam
 make -j 8
 make -j 8 -k install
 make -j 8 -k install

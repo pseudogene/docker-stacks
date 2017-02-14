@@ -1,6 +1,7 @@
 # pseudogene / docker-stacks
 
-[![](https://images.microbadger.com/badges/image/pseudogene/docker-stacks.svg)](https://microbadger.com/images/pseudogene/docker-stacks)
+[![Docker Pulls](https://img.shields.io/docker/pulls/pseudogene/docker-stacks.svg)](https://hub.docker.com/r/pseudogene/docker-stacks/)
+[![Layers](https://images.microbadger.com/badges/image/pseudogene/docker-stacks.svg)](https://microbadger.com/images/pseudogene/docker-stacks)
 
 ## Short Description
 Stacks is a software pipeline for building loci from short-read sequences - Now in a Docker

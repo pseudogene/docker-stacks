@@ -1,9 +1,9 @@
-FROM php:5-apache
+FROM php:apache
 MAINTAINER Michael Bekaert <michael.bekaert@stir.ac.uk>
 
-LABEL description="Stacks (GUI) Docker" version="1.2" Vendor="Institute of Aquaculture, University of Stirling"
+LABEL description="Stacks (GUI) Docker" version="1.3" Vendor="Institute of Aquaculture, University of Stirling"
 ENV STACKVERSION 1.44
-ENV DOCKERVERSION 1.2
+ENV DOCKERVERSION 1.3
 
 USER root
 
