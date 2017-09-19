@@ -4,7 +4,7 @@ FROM ubuntu:16.04
 MAINTAINER Michael Bekaert <michael.bekaert@stir.ac.uk>
 
 LABEL description="Stacks (CLI) Docker" version="1.3" Vendor="Institute of Aquaculture, University of Stirling"
-ENV STACKVERSION 1.46
+ENV STACKVERSION 1.47
 ENV DOCKERVERSION 1.4
 
 USER root
